@@ -13,10 +13,13 @@
   <dt>Capitalizado:</dt>
   <dd>{{ capitalizedName }}</dd>
 </dl>
-
+@if (name !== 'Spiderman') {
 <button class="btn btn-primary mx-2" (click)="changeHero()">
   Cambiar nombre
 </button>
-<button class="btn btn-primary" (click)="changeAge()">
-  Cambiar edad
-</button>
+}
+@if (age !== 22) {
+<button class="btn btn-primary" (click)="changeAge()">Cambiar edad</button>
+}
+
+<button class="btn btn-primary mx-2" (click)="reset()">Reset</button>
